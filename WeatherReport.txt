@@ -1,0 +1,6 @@
+Weather Report for Pune as of 2024-05-21 21:21
+Temperature - 31.7 C
+Feels like - 35.0 C
+Humidity - 53
+Weather Condition - Clear
+UV index - 1.0
