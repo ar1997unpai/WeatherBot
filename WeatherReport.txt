@@ -1,0 +1,9 @@
+
+
+ **************************************************************************************
+Weather Report for In Guezzam Airport as of 2024-05-26 9:59
+Temperature - 36.1 C
+Feels like - 34.6 C
+Humidity - 10
+Weather Condition - Sunny
+UV index - 9.0
