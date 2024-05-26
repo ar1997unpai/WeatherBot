@@ -1,6 +1,9 @@
-Weather Report for Pune as of 2024-05-21 21:21
-Temperature - 31.7 C
-Feels like - 35.0 C
-Humidity - 53
-Weather Condition - Clear
-UV index - 1.0
+
+
+ **************************************************************************************
+Weather Report for In Guezzam Airport as of 2024-05-26 9:59
+Temperature - 36.1 C
+Feels like - 34.6 C
+Humidity - 10
+Weather Condition - Sunny
+UV index - 9.0
