@@ -7,3 +7,18 @@ Error Status code : 400Error Status code : 1006 	 - 	 Error Message : No matchin
  ************* 
 Error Log of 2024-05-26 15:08:25.194637 >>>> 
 Error Status code : 400Error Status code : 1006 	 - 	 Error Message : No matching location found. - ksajbgs adgkbjasdg kasjdgb
+
+ ************* 
+Error Log of 2024-05-27 17:43:03.004369 >>>> 
+Error Status code : 400
+Error code : 1006 	 - 	 Error Message : No matching location found. - kajsbdgkajsbgksad gaksjdbg
+
+ ************* 
+Error Log of 2024-05-27 18:12:55.894642 >>>> 
+Error Status code : 400
+Error code : 1006 	 - 	 Error Message : No matching location found. - Delhy
+
+ ************* 
+Error Log of 2024-05-27 18:14:52.060844 >>>> 
+Error Status code : 400
+Error code : 1006 	 - 	 Error Message : No matching location found. - Kochi.Pune
