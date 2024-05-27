@@ -5,21 +5,15 @@ from fetchWeather import fetch_weather
 def mainMenu():
     print("Hey There!! What would like to do today?")
     userResponse = input("1. Get Weather details\n2. Nothing. Just Hanging!!\n>>> ")
-    weather_keywords = ['weather','forecast','temperature']
-    if (userResponse == "1" or any(keyword in userResponse.lower() for keyword in weather_keywords)):
+    weather_keywords = ['weather','forecast','temperature'] #Comparison list
+    if (userResponse == "1" or any(keyword in userResponse.lower() for keyword in weather_keywords)): # checks for the user selected option or occurance of the word from the comparisonlist
         print("Sure let me summon the weather god!!")
         time.sleep(1.5)
-        checkWeather = input("1. Fetch Weather for 1 location\n2. Fetch Weather for multiple Location\n>>> ")
-        if(checkWeather == "1"):
-            location = input("Please enter your current city >> ")
-            fetch_weather(location)
-        elif(checkWeather == "2"):
-            locations = input("Enter the names of the city Separated by comma >> ").split(',')
-            for location in locations:
-                fetch_weather(location)
-        else:
-            print("Seems like you have entered a wrong input.")
-            mainMenu()
+        locations_input = input("Enter the name of the city (or multiple cities separated by commas) >> ")
+        locations = locations_input.split(',') # when multiple cities are given, splitting it to a list
+
+        for location in locations:
+            fetch_weather(location.strip()) # Calling the fetchWeather func - .strip() removes white spaces 
         
     else:
         print("Seems like you have entered a wrong input. Please try again.\nTry something like Give me weather report! (or) just type 1\n\n")

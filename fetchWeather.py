@@ -2,21 +2,22 @@ from wsgiref import headers
 import requests
 import time
 from datetime import datetime
+from functools import lru_cache
 
-currentTime = datetime.now()
+
+currentTime = datetime.now() # function to get current time
 
 
+@lru_cache(maxsize=100) # decorator for the caching stores max of 100 results
 def fetch_weather(loc):
-    apiKey = "583f28380c46473c90a112459242005"
+    apiKey = "583f28380c46473c90a112459242005" #api key
     url = f"http://api.weatherapi.com/v1/current.json?q={loc}"
     headers ={"key":apiKey}
     
     try:
         weatherResponseRaw = requests.get(url,headers)
-        if weatherResponseRaw.status_code == 200:
-            #print(weatherResponseRaw)
+        if weatherResponseRaw.status_code == 200: #When city name exists, the API fetches the details
             weatherResponse = weatherResponseRaw.json()
-            #print(weatherResponse)
             
             print("\n")
             print(f"checking weather in your city - {loc}!")
@@ -29,7 +30,7 @@ def fetch_weather(loc):
             print(f"Weather Condition - {weatherResponse["current"]["condition"]["text"]}")
             print(f"UV index - {weatherResponse["current"]["uv"]}")
             
-            with open("WeatherReport.txt","w") as file:
+            with open("WeatherReport.txt","w") as file: #writing the weather details to a external file
                 file.write ("\n\n **************************************************************************************\n")
                 file.write(f"Weather Report for {weatherResponse['location']['name']} as of {weatherResponse['location']['localtime']}\n")
                 file.write(f"Temperature - {weatherResponse['current']['temp_c']} C\n")
@@ -41,9 +42,8 @@ def fetch_weather(loc):
 
         else:
             print("Unable to fetch weather details. Please try again later")
-            #print(weatherResponseRaw)
             errorWeatherResponse = weatherResponseRaw.json()
-            with open("logs.txt","a") as file:
+            with open("logs.txt","a") as file: #logging all the errors into logs.txt
                 file.write("\n\n ************* \n")
                 file.write(f"Error Log of {currentTime} >>>> \n")
                 file.write(f"Error Status code : {weatherResponseRaw.status_code}\n")
