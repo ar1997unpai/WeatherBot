@@ -12,7 +12,7 @@ This is a simple weather application that fetches weather details using the Weat
 ## Requirements
 
 - Python 3.x
-- Requests library (`pip install requests`
+- Requests library (`pip install requests`)
 
 
 
