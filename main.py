@@ -12,7 +12,7 @@ def extract_locations_and_keywords(text):
     doc = nlp(text)
     locations = [ent.text for ent in doc.ents if ent.label_ == "GPE"]
     keywords = [ent.text for ent in doc.ents if ent.label_ == "DATE"]# Extracting dates or other relevant keywords
-    print(f">>>>>>>>>>>>>>>>>locations :{locations}\nkeywords : {keywords}")
+    #print(f">>>>>>>>>>>>>>>>>locations :{locations}\nkeywords : {keywords}")
     return locations, keywords
 
 
@@ -33,7 +33,7 @@ def quick_weather_check(text):
 def mainMenu():
     print("Hey There!! What would like to do today?")
     userResponse = input("1. Get Weather details\n2. Nothing. Just Hanging!!\n>>> ")
-    weather_keywords = ['weather','forecast','temperature','climate','cold','hot','rain','raining'] #Comparison list
+    weather_keywords = ['weather','forecast','temperature','climate','cold','hot','rain','raining','forcast'] #Comparison list
     locations, keywords = extract_locations_and_keywords(userResponse)
     if (userResponse == "1"): # checks for the user selected option or occurance of the word from the comparisonlist
         print("Sure let me summon the weather god!!")
