@@ -22,3 +22,8 @@ Error code : 1006 	 - 	 Error Message : No matching location found. - Delhy
 Error Log of 2024-05-27 18:14:52.060844 >>>> 
 Error Status code : 400
 Error code : 1006 	 - 	 Error Message : No matching location found. - Kochi.Pune
+
+ ************* 
+Error Log of 2024-05-28 21:19:08.821337 >>>> 
+Error Status code : 400
+Error code : 1006 	 - 	 Error Message : No matching location found. - Neywork
