@@ -11,7 +11,7 @@ currentTime = datetime.now() # function to get current time
 @lru_cache(maxsize=100) # decorator for the caching stores max of 100 results
 def fetch_weather(loc):
     apiKey = "583f28380c46473c90a112459242005" #api key
-    url = f"http://api.weatherapi.com/v1/current.json?q={loc}"
+    url = f"http://api.weatherapi.com/v1/forecast.json?q={loc}"
     headers ={"key":apiKey}
     
     try:
@@ -28,7 +28,7 @@ def fetch_weather(loc):
             print(f"Feels like - {weatherResponse["current"]["feelslike_c"]} C")
             print(f"Humidity - {weatherResponse["current"]["humidity"]}")
             print(f"Weather Condition - {weatherResponse["current"]["condition"]["text"]}")
-            print(f"UV index - {weatherResponse["current"]["uv"]}")
+            print(f"UV index - {weatherResponse["current"]["uv"]}\n\n")
             
             with open("WeatherReport.txt","w") as file: #writing the weather details to a external file
                 file.write ("\n\n **************************************************************************************\n")
@@ -37,7 +37,7 @@ def fetch_weather(loc):
                 file.write(f"Feels like - {weatherResponse['current']['feelslike_c']} C\n")
                 file.write(f"Humidity - {weatherResponse['current']['humidity']}\n")
                 file.write(f"Weather Condition - {weatherResponse['current']['condition']['text']}\n")
-                file.write(f"UV index - {weatherResponse['current']['uv']}\n")
+                file.write(f"UV index - {weatherResponse['current']['uv']}")
 
 
         else:
