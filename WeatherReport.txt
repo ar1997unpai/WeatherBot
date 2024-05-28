@@ -1,9 +1,9 @@
 
 
  **************************************************************************************
-Weather Report for Bengaluru as of 2024-05-28 21:25
-Temperature - 27.0 C
-Feels like - 29.4 C
-Humidity - 74
-Weather Condition - Partly cloudy
+Weather Report for Pune as of 2024-05-28 21:48
+Temperature - 26.4 C
+Feels like - 28.3 C
+Humidity - 70
+Weather Condition - Clear
 UV index - 1.0
